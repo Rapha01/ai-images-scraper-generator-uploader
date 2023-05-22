@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+  midseaworkerscraperdev:
+    container_name: midseaWorkerDev
+    restart: always
+    build: .
+    volumes:
+      - ./src:/usr/src/app
+      - C:/Users/User/Desktop/images:/usr/src/images
+      #- /usr/src/app/node_modules
+    command: npm run developmentNodemon

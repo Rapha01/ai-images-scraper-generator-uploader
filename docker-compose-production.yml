@@ -1,0 +1,10 @@
+version: '3.3'
+services:
+  midseaworkerprod:
+    container_name: midseaWorkerProd
+    restart: always
+    build: .
+    volumes:
+      - ./src:/usr/src/app
+      #- /usr/src/app/node_modules
+    command: npm run production
